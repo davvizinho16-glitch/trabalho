@@ -1,0 +1,81 @@
+<html>
+    <html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro ONG e Relatos</title>
+  <link rel="stylesheet" href="css.css">
+  </head>
+  <body>
+    <h1>Um serviço para comunidade litorânea</h1>
+  
+    <header>
+ 
+  <nav>
+    
+  <button onclick="VerONG()">Ver Ongs</button>
+  <button onclick="Relatos()">Relatos</button>
+  <button onclick="Perfil()">Perfil</button>
+  <button onclick="MeusRelatos()">Meus relatos</button>
+
+  </nav>
+<div id="VerONG" style="display:none"></div>  
+
+  <div id="Relatos"style="display:none"> </div>
+    <div class="container1">
+  <div id="Perfil"style="display:none"> 
+  <p>Nome:</p>
+  <div id="mostrarN"></div>
+  <p>Meu email:</p>
+    <div id="Mostraemail"></div>
+    <p>Minha localização:</p>
+      <div id="LocalMostrar"></div></div>
+</div>
+  <div id="MeusRelatos"style="display:none"> 
+    Meus relatos:
+    <div id="Mostrarinfo"></div>
+</div>
+</header>
+  <script>
+
+    function VerONG(){
+      document.getElementById("VerONG").style.display="block"
+    }
+     function Relatos(){
+      document.getElementById("Relatos").style.display="block"
+    }
+     function Perfil(){
+      document.getElementById("Perfil").style.display="block";
+      document.querySelector(".container1").style.display="block";
+      document.getElementById("MeusRelatos").style.display="none";
+      document.getElementById("Relatos").style.display="none";
+      document.getElementById("VerONG").style.display="none";
+    
+      const NomedoM=localStorage.getItem("NomedoM")
+
+      const email=localStorage.getItem("email")
+      
+      const localização=localStorage.getItem("localização")
+      if(NomedoM){
+        document.getElementById("mostrarN").innerHTML = NomedoM;
+      }
+      if(email){
+        document.getElementById("Mostraemail").innerHTML = email;
+      }
+      if(localização){
+        document.getElementById("LocalMostrar").innerHTML= localização;
+      }
+
+    }
+     function MeusRelatos(){
+      document.getElementById("MeusRelatos").style.display="block";
+       document.getElementById("Perfil").style.display="none";
+       const info=localStorage.getItem("probleminfo")
+    if(info){
+      document.getElementById("Mostrarinfo").innerHTML = info;
+    }
+  }
+    
+
+    
+  </script>
+  </body>

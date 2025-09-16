@@ -1,0 +1,82 @@
+#css
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    gap: 16px;
+    border: 10px;
+    margin: 10px auto;
+    padding: 10px;
+
+    
+}
+head{
+   font-family: 'Courier New', Courier, monospace;
+
+}
+button{
+   background:linear-gradient(rgba(61, 57, 60, 0.795),rgb(209, 82, 209));
+   background-color: rgb(89, 89, 218);
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+ button:hover{
+   background:linear-gradient(rgb(43, 43, 48),rgb(219, 2, 219));
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+input{
+    border-color: aliceblue;
+
+}
+input:hover{
+    background-color: antiquewhite;
+}
+
+nav {
+  background-color: #004080;   /* cor de fundo */
+  padding: 15px;              /* espaço interno */
+  text-align: center;         /* centraliza os botões */
+}
+
+nav button {
+  background-color: #008CBA;  /* cor dos botões */
+  color: white;               /* cor do texto */
+  border: none;               /* sem borda */
+  padding: 10px;         /* tamanho do botão */
+  margin: 10px;                /* espaço entre os botões */
+  border-radius: 5px;         /* cantos arredondados */
+  cursor: pointer;            /* cursor de mãozinha */
+  font-size: 16px;            /* tamanho da fonte */
+}
+
+nav button:hover {
+  background-color: #005f73;  /* cor quando passa o mouse */
+}
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin: 1px;
+ 
+}
+.container1{
+    background: rgb(255, 207, 247);
+    gap: 1px;
+    padding: auto;
+    border-radius: 10px;
+    border: solid black 1px;
+   width: 200px;
+   height: auto;
+    margin: 20px auto;
+    justify-items:start;
+    }
+    .container2{
+    background: rgb(255, 207, 247);
+    width: 435px;
+    height: auto;
+    gap: 1px;}
+
+

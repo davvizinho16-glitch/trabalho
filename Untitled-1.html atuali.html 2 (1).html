@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro ONG e Relatos</title>
+  <link rel="stylesheet" href="davi.css">
+  <script> src="JS" </script>
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Cadastro de ONGs e moradores</h1>
+    
+    <h2>Uma sociedade conectada com serviços de bem</h2>
+  
+ <div> 
+  <button onclick="Moradormostrar()">Sou morador</button> 
+  <button onclick="MostrarONG()">Sou ONG </button>
+  </div>
+ </div>
+    <div id="MoradorInter" style="display:none">
+      <div class="card">
+      <form id="Moradorform">
+      <h1>Cadatre-se</h1>
+    <input type="text" id="NomedoM" placeholder="Seu Nome:" required>
+    <input type="email" id="email" placeholder="Seu email:" required>
+    <input type="text" id="localização" placeholder="Sua localização(cidade):" required>
+    <input type="text" id="Problemrelat" placeholder="Seu Problema:" required>
+    <button type="submit">enviar</button>
+     <div id="continuar1" style="display: none;">
+      <button onclick="continuarpág1()">continuar</button>
+</div>
+</div>
+   </form>
+   </div>
+   </div>
+   </div>
+  </div>
+
+    <div id="ONGInter" style="display:none">
+      <div class="card">
+      <form id="Ongform">
+      <h1>Cadatre-se</h1>
+    <input type="text" id="NomedaONG" placeholder="Sua ONG:" required>
+    <input type="text" id="áreaatuação" placeholder="Qual local de atuação:" required>
+    <input type="text" id="CNPJ" placeholder="Seu CNPJ" required>
+    <button type="submit">enviar</button>
+    <div id="continuar" style="display: none;">
+      <button onclick="continuarpág()">continuar</button>
+
+</div>
+</div>
+</form>
+<div id="BoasVindas">
+</div>
+</div>
+ </div>
+
+<script> 
+const MoradorInter=document.getElementById("MoradorInter")
+const ONGInter= document.getElementById("ONGInter")
+ const Continuar=document.getElementById("continuar")
+ const Continuar1=document.getElementById("continuar1")
+ const pag=document.getElementById("PÁG")
+ const Boasvindas=document.getElementById("BoasVindas")
+ const ong=document.getElementById("Ongform")
+const mora=document.getElementById("Moradorform")
+const Nome=document.getElementById("NomedaONG").value;
+
+ Continuar.style.display="none";
+ 
+ ong.addEventListener("submit",function (enviar){
+enviar.preventDefault();
+
+
+if(!ong.checkValidity()){
+alert("Preencha todos os campos requeridos!⚠️");
+return;
+}
+ 
+ Continuar.style.display="block";
+Boasvindas.innerText= "seja bem vindo"+ Nome +"!"
+ 
+  });
+  Continuar1.style.display="none";
+ 
+ mora.addEventListener("submit",function (enviar1){
+enviar1.preventDefault();
+
+
+if(!mora.checkValidity()){
+alert("Preencha todos os campos requeridos!⚠️");
+return;
+}
+ 
+ Continuar1.style.display="block";
+Boasvindas.innerText= "seja bem vindo"+"!"
+ 
+  });
+  
+
+ function continuarpág(){
+
+window.location.href = "ghdfdfhdfh.html";
+const NomeG=document.getElementById("NomedaONG").value;
+     localStorage.setItem("NomedaONG",NomeG)
+
+  const area=document.getElementById("Area").value;
+     localStorage.setItem("Area",area)
+
+     const cnpj=document.getElementById("CNPJ").value;
+     localStorage.setItem("CNPJ",cnpj)
+     window.location.href="ghdfdfhdfh.html"
+   
+ }
+ function continuarpág1(){
+
+window.location.href = "ashdbgsdv1.html";
+ const info=document.getElementById("Problemrelat").value;
+     localStorage.setItem("probleminfo",info)
+     window.location.href="ashdbgsdv1.html";
+
+ const NomeM=document.getElementById("NomedoM").value;
+     localStorage.setItem("Nomedom",NomeM)
+ 
+     const email=document.getElementById("email").value;
+     localStorage.setItem("email",email)
+        window.location.href="ashdbgsdv1.html"
+   
+ }
+</script>
+ <script>
+  function Moradormostrar(){
+      document.getElementById("MoradorInter").style.display="block"
+     document.getElementById("ONGInter").style.display="none"
+     
+  }
+   function MostrarONG(){
+      document.getElementById("MoradorInter").style.display="none"
+     document.getElementById("ONGInter").style.display="block"
+   }
+   
+   
+   </script>
+
+  </body>

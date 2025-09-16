@@ -1,0 +1,68 @@
+
+    
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro ONG e Relatos</title>
+  <link rel="stylesheet" href="css.css">
+
+  <h1>Um serviço para comunidade litorânea</h1>
+  
+    
+ 
+  <nav>
+    
+  <button onclick="Projetos()">meus projetos</button>
+  <button onclick="Relatos()">Relatos</button>
+  <button onclick="Perfil()">Perfil</button>
+  <button onclick="Sobre()">Sobre projetos</button>
+  
+  <div id="Projetosir" style="display:none";>
+    <h2>Projetos que está participando:</h2>
+
+  <div id="Relatos"style="display:none";>
+    <h1>Aqui estão relatos de moradores:</h1>
+
+  <div id="Perfil"style="display:none";>
+    <P>CPJ:</P>
+    <div id="MostraCN"></div>
+    <p>Nome da ONG:</p>
+      <div id="NomeONGm"></div>
+     <p>Local onde atuo:
+      <div id= "Mostralocal"> </div>
+     </p>
+
+
+  <div id="Sobre"style="display:none">
+ </div>
+  </div>
+  </div>
+  </div>
+  </nav>
+  <script>
+
+    function Projetos(){
+      document.getElementById("Projetosir").style.display="block"
+    }
+     function Relatos(){
+      document.getElementById("Relatos").style.display="block"
+    }
+     function Perfil(){
+      document.getElementById("Perfil").style.display="block";
+      const NomedaONG=localStorage.getItem("NomedaONG")
+      const CNPJ=localStorage.getItem("CNPJ")
+      const Area=localStorage.getItem("áreaatuação")
+      if(CNPJ){
+        document.getElementById("MostraCN").innerHTML = CNPJ;
+      }
+      if(NomedaONG){
+        document.getElementById("NomeONGm").innerHTML = NomedaONG;
+      }
+      if(Area){
+        document.getElementById("Mostralocal").innerHTML = Area;
+      }
+    }
+     function Sobre(){
+      document.getElementById("Sobre").style.display="block"
+    }
+  </script>
